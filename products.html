@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All Products — Greenland Water Purifiers</title>
+  <title>All Products — Greentech Water Purifiers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
@@ -31,12 +31,31 @@
       border-bottom: 1px solid var(--border);
     }
     .nav-wrap { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; height: 66px; }
-    .logo { display: flex; align-items: center; gap: 9px; text-decoration: none; }
-    .logo-img { height: 44px; width: auto; max-width: 200px; object-fit: contain; display: block; }
-    .logo-mark { width: 34px; height: 34px; border-radius: 9px; background: var(--forest); display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; }
-    .logo-name { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 900; color: var(--forest); letter-spacing: -.3px; }
-    .logo-name sup { font-size: .6rem; vertical-align: super; font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--mid); }
+    .logo {
+      display: flex; align-items: center; gap: 9px; text-decoration: none;
+      transition: opacity .2s;
+    }
+    .logo:hover { opacity: .88; }
+    .logo-wordmark {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-size: 1.36rem;
+      letter-spacing: -0.038em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .logo-prefix { color: var(--forest); }
+    .logo-suffix { font-style: italic; color: var(--green); }
+    .logo-trade {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: .55rem;
+      font-weight: 600;
+      color: var(--mid);
+      vertical-align: super;
+      margin-left: 3px;
+      font-style: normal;
+      letter-spacing: 0;
+    }
     .nav-links { display: flex; gap: 30px; list-style: none; }
     .nav-links a { text-decoration: none; font-size: .88rem; font-weight: 500; color: var(--mid); transition: color .2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--forest); }
@@ -196,7 +215,9 @@
     .pg-btn.wide { width: auto; padding: 0 16px; }
 
     /* ─── FOOTER ─── */
-    footer .logo-img { filter: brightness(1.06); max-width: 180px; }
+    .footer-brand .logo-prefix { color: rgba(255,255,255,.94); }
+    .footer-brand .logo-suffix { color: var(--lime); font-style: italic; }
+    .footer-brand .logo-trade { color: rgba(255,255,255,.38); }
     footer { background: var(--ink); margin-top: 0; }
     .footer-main { max-width: 1300px; margin: 0 auto; padding: 64px 32px 36px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
     .footer-brand p { font-size: .85rem; color: rgba(255,255,255,.4); line-height: 1.8; margin-top: 16px; font-weight: 300; max-width: 280px; }
@@ -227,8 +248,8 @@
 <!-- ─── NAV ─── -->
 <nav>
   <div class="nav-wrap">
-    <a href="index.html" class="logo">
-      <img src="greentech%20%281%29.jpg" alt="Greentech" class="logo-img" width="200" height="44" />
+    <a href="index.html" class="logo" aria-label="Greentech home">
+      <span class="logo-wordmark"><span class="logo-prefix">Green</span><span class="logo-suffix">tech</span><sup class="logo-trade">®</sup></span>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -658,9 +679,9 @@
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <div class="logo">
-        <img src="greentech%20%281%29.jpg" alt="Greentech" class="logo-img" width="200" height="44" />
-      </div>
+      <a href="index.html" class="logo">
+        <span class="logo-wordmark"><span class="logo-prefix">Green</span><span class="logo-suffix">tech</span><sup class="logo-trade">®</sup></span>
+      </a>
       <p style="margin-top:12px;"><a href="tel:+917594900724" style="color:rgba(255,255,255,.85);text-decoration:none;">7594900724</a> · <a href="tel:+919526370551" style="color:rgba(255,255,255,.85);text-decoration:none;">9526370551</a></p>
       <p>Providing safe, healthy drinking water to Indian families since 1999. Built in India, engineered for India.</p>
       <div class="footer-socials">

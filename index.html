@@ -44,19 +44,34 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 32px; height: 66px;
     }
-    .logo { display: flex; align-items: center; gap: 9px; text-decoration: none; }
-    .logo-img { height: 44px; width: auto; max-width: 200px; object-fit: contain; display: block; }
-    footer .logo-img { filter: brightness(1.06); max-width: 180px; }
-    .logo-mark {
-      width: 34px; height: 34px; border-radius: 9px;
-      background: var(--forest); display: flex; align-items: center; justify-content: center;
+    .logo {
+      display: flex; align-items: center; gap: 9px; text-decoration: none;
+      transition: opacity .2s;
     }
-    .logo-mark svg { width: 18px; height: 18px; }
-    .logo-name {
-      font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 900;
-      color: var(--forest); letter-spacing: -.3px;
+    .logo:hover { opacity: .88; }
+    .logo-wordmark {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-size: 1.36rem;
+      letter-spacing: -0.038em;
+      line-height: 1;
+      white-space: nowrap;
     }
-    .logo-name sup { font-size: .6rem; vertical-align: super; font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--mid); }
+    .logo-prefix { color: var(--forest); }
+    .logo-suffix {
+      font-style: italic;
+      color: var(--green);
+    }
+    .logo-trade {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: .55rem;
+      font-weight: 600;
+      color: var(--mid);
+      vertical-align: super;
+      margin-left: 3px;
+      font-style: normal;
+      letter-spacing: 0;
+    }
     .nav-links { display: flex; gap: 30px; list-style: none; }
     .nav-links a {
       text-decoration: none; font-size: .88rem; font-weight: 500;
@@ -441,7 +456,9 @@
     /* ─── FOOTER ─── */
     footer { background: var(--ink); }
     .footer-main { max-width: 1280px; margin: 0 auto; padding: 72px 32px 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; }
-    .footer-brand .logo-name { color: #fff; }
+    .footer-brand .logo-prefix { color: rgba(255,255,255,.94); }
+    .footer-brand .logo-suffix { color: var(--lime); font-style: italic; }
+    .footer-brand .logo-trade { color: rgba(255,255,255,.38); }
     .footer-brand p { font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.8; margin-top: 16px; font-weight: 300; max-width: 280px; }
     .footer-socials { display: flex; gap: 8px; margin-top: 24px; }
     .s-link {
@@ -497,8 +514,8 @@
 <!-- ══ NAV ══ -->
 <nav>
   <div class="nav-wrap">
-    <a href="index.html" class="logo">
-      <img src="greentech%20%281%29.jpg" alt="Greentech" class="logo-img" width="200" height="44" />
+    <a href="index.html" class="logo" aria-label="Greentech home">
+      <span class="logo-wordmark"><span class="logo-prefix">Green</span><span class="logo-suffix">tech</span><sup class="logo-trade">®</sup></span>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -853,9 +870,9 @@
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <div class="logo">
-        <img src="greentech%20%281%29.jpg" alt="Greentech" class="logo-img" width="200" height="44" />
-      </div>
+      <a href="index.html" class="logo">
+        <span class="logo-wordmark"><span class="logo-prefix">Green</span><span class="logo-suffix">tech</span><sup class="logo-trade">®</sup></span>
+      </a>
       <p style="margin-top:12px;"><a href="tel:+917594900724" style="color:rgba(255,255,255,.85);text-decoration:none;">7594900724</a> · <a href="tel:+919526370551" style="color:rgba(255,255,255,.85);text-decoration:none;">9526370551</a></p>
       <p>Providing safe, healthy drinking water to Indian families since 1999. Built in India, engineered for India.</p>
       <div class="footer-socials">
